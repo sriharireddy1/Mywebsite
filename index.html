@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,26 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SV Notebooks</title>
     <style>
-        /* Add CSS styles here */
+        /* Enhanced CSS Styles */
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
         
-        #myAnimation {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background-color: red;
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
         
         #hero {
-            background-image: url('https://source.unsplash.com/1600x900/?notebooks');
-            background-size: cover;
+            background-image: linear-gradient(to bottom, #f0f0f0, #ccc);
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
+            color: black;
+        }
+        
+        #products {
+            padding: 20px;
         }
         
         #product-grid {
@@ -37,6 +43,48 @@
             background-color: #f0f0f0;
             padding: 20px;
             border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        #about {
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        
+        #contact {
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        input, textarea {
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 50%;
+        }
+        
+        button {
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+        
+        #myAnimation {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
         }
     </style>
 </head>
@@ -61,15 +109,15 @@
         <div id="product-grid">
             <div class="product">
                 <h3>Leather-Bound Notebook</h3>
-                <img src="https://source.unsplash.com/200x150/?leather-notebook" alt="Leather Notebook">
+                <img src="https://picsum.photos/200/150" alt="Leather Notebook">
             </div>
             <div class="product">
                 <h3>Spiral-Bound Notebook</h3>
-                <img src="https://source.unsplash.com/200x150/?spiral-notebook" alt="Spiral Notebook">
+                <img src="https://picsum.photos/200/151" alt="Spiral Notebook">
             </div>
             <div class="product">
                 <h3>Hardcover Notebook</h3>
-                <img src="https://source.unsplash.com/200x150/?hardcover-notebook" alt="Hardcover Notebook">
+                <img src="https://picsum.photos/200/152" alt="Hardcover Notebook">
             </div>
         </div>
     </section>
@@ -77,7 +125,7 @@
     <section id="about">
         <h2>About Us</h2>
         <p>SV Notebooks is dedicated to creating high-quality notebooks.</p>
-        <img src="https://source.unsplash.com/400x200/?person-writing" alt="Person Writing in Notebook">
+        <img src="https://picsum.photos/400/200" alt="Person Writing in Notebook">
     </section>
 
     <section id="contact">
