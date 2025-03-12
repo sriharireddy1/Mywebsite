@@ -117,4 +117,13 @@
             }
         }
 
-        
+        document.getElementById("animateButton").addEventListener("click", myMove);
+
+        function changeContent() {
+            document.getElementById("content").innerHTML = "New content here!";
+        }
+
+        document.getElementById("changeButton").addEventListener("click", changeContent);
+    </script>
+</body>
+</html>
