@@ -3,46 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notebook Manufacturing Company</title>
+    <title>SV Notebooks</title>
     <style>
+        /* Add CSS styles here */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
         }
-        .header {
-            background-color: #4CAF50;
+        
+        #myAnimation {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+        
+        #hero {
+            background-image: url('https://source.unsplash.com/1600x900/?notebooks');
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: white;
-            text-align: center;
-            padding: 1em 0;
         }
-        .content {
-            padding: 2em;
-            text-align: center;
+        
+        #product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
-        .footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        
+        .product {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Welcome to SV Manufacturing</h1>
-        <p>Your Trusted Notebook Manufacturer</p>
-    </div>
-    <div class="content">
-        <p>Discover our range of high-quality, eco-friendly notebooks designed to inspire creativity and productivity.</p>
-        <img src="https://www.pexels.com/photo/notebook-pen-plant-40568/" alt="Notebook Image" width="300">
-    </div>
-    <div class="footer">
-        <p>© 2025 [Company Name]. All rights reserved.</p>
-    </div>
-</body>
-</html>
+    <header>
+        <h1>SV Notebooks</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Welcome to SV Notebooks</h2>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div id="product-grid">
+            <div class="product">
+                <h3>Leather-Bound Notebook</h3>
+                <img src="https://source.unsplash.com/200x150/?leather-notebook" alt="Leather Notebook">
+            </div>
+            <div class="product">
+                <h3>Spiral-Bound Notebook</h3>
+                <img src="https://source.unsplash.com/200x150/?spiral-notebook" alt="Spiral Notebook">
+            </div>
+            <div class="product">
+                <h3>Hardcover Notebook</h3>
+                <img src="https://source.unsplash.com/200x150/?hardcover-notebook" alt="Hardcover Notebook">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>SV Notebooks is dedicated to creating high-quality notebooks.</p>
+        <img src="https://source.unsplash.com/400x200/?person-writing" alt="Person Writing in Notebook">
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <button id="myButton">Click Me!</button>
+    <button id="animateButton">Animate!</button>
+    <button id="changeButton">Change Content!</button>
+    <div id="myAnimation"></div>
+    <div id="content">Initial Content</div>
+
+    <script>
+        document.getElementById("myButton").addEventListener("click", function() {
+            alert("Thank you for visiting SV Notebooks!");
+        });
+
+        function myMove() {
+            let elem = document.getElementById("myAnimation");
+            let pos = 0;
+            let id = setInterval(frame, 10);
+
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + 'px';
+                    elem.style.left = pos + 'px';
+                }
+            }
+        }
+
+        
