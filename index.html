@@ -1,98 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SV Notebooks</title>
+    <title>Notebook Industry</title>
     <style>
-        /* Enhanced CSS Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
-        
+
         header {
-            background-color: #333;
+            background-color: #4CAF50;
             color: white;
-            padding: 20px;
+            padding: 1em 0;
             text-align: center;
         }
-        
-        #hero {
-            background-image: linear-gradient(to bottom, #f0f0f0, #ccc);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: black;
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
         }
-        
-        #products {
-            padding: 20px;
+
+        nav ul li {
+            display: inline;
+            margin: 0 1em;
         }
-        
-        #product-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        
-        .product {
-            background-color: #f0f0f0;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        
-        #about {
-            padding: 20px;
-            background-color: #f7f7f7;
-        }
-        
-        #contact {
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
-        
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        input, textarea {
-            padding: 10px;
-            margin: 10px;
-            border: none;
-            border-radius: 5px;
-            width: 50%;
-        }
-        
-        button {
-            padding: 10px;
-            margin: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #333;
+
+        nav ul li a {
             color: white;
-            cursor: pointer;
+            text-decoration: none;
         }
-        
-        #myAnimation {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background-color: red;
+
+        section {
+            padding: 2em;
+            border-bottom: 1px solid #ccc;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        #home {
+            background-color: #f9f9f9;
+        }
+
+        #products {
+            background-color: #e9e9e9;
+        }
+
+        #about {
+            background-color: #d9d9d9;
+        }
+
+        #contact {
+            background-color: #c9c9c9;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>SV Notebooks</h1>
+        <h1>Welcome to Notebook Industry</h1>
         <nav>
             <ul>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#products">Products</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -100,78 +79,32 @@
         </nav>
     </header>
 
-    <section id="hero">
-        <h2>Welcome to SV Notebooks</h2>
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to the leading provider of high-quality notebooks.</p>
+        <img src="https://via.placeholder.com/800x400?text=Notebook+Industry+Home" alt="Notebook Industry Home">
     </section>
 
     <section id="products">
-        <h2>Our Products</h2>
-        <div id="product-grid">
-            <div class="product">
-                <h3>Leather-Bound Notebook</h3>
-                <img src="https://picsum.photos/200/150" alt="Leather Notebook">
-            </div>
-            <div class="product">
-                <h3>Spiral-Bound Notebook</h3>
-                <img src="https://picsum.photos/200/151" alt="Spiral Notebook">
-            </div>
-            <div class="product">
-                <h3>Hardcover Notebook</h3>
-                <img src="https://picsum.photos/200/152" alt="Hardcover Notebook">
-            </div>
-        </div>
+        <h2>Products</h2>
+        <p>Explore our wide range of notebooks designed for every need.</p>
+        <img src="https://via.placeholder.com/800x400?text=Our+Products" alt="Our Products">
     </section>
 
     <section id="about">
         <h2>About Us</h2>
-        <p>SV Notebooks is dedicated to creating high-quality notebooks.</p>
-        <img src="https://picsum.photos/400/200" alt="Person Writing in Notebook">
+        <p>Learn more about our company and our commitment to quality.</p>
+        <img src="https://via.placeholder.com/800x400?text=About+Us" alt="About Us">
     </section>
 
     <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Message"></textarea>
-            <button type="submit">Submit</button>
-        </form>
+        <h2>Contact</h2>
+        <p>Get in touch with us for any inquiries or feedback.</p>
+        <img src="https://via.placeholder.com/800x400?text=Contact+Us" alt="Contact Us">
     </section>
 
-    <button id="myButton">Click Me!</button>
-    <button id="animateButton">Animate!</button>
-    <button id="changeButton">Change Content!</button>
-    <div id="myAnimation"></div>
-    <div id="content">Initial Content</div>
-
-    <script>
-        document.getElementById("myButton").addEventListener("click", function() {
-            alert("Thank you for visiting SV Notebooks!");
-        });
-
-        function myMove() {
-            let elem = document.getElementById("myAnimation");
-            let pos = 0;
-            let id = setInterval(frame, 10);
-
-            function frame() {
-                if (pos == 350) {
-                    clearInterval(id);
-                } else {
-                    pos++;
-                    elem.style.top = pos + 'px';
-                    elem.style.left = pos + 'px';
-                }
-            }
-        }
-
-        document.getElementById("animateButton").addEventListener("click", myMove);
-
-        function changeContent() {
-            document.getElementById("content").innerHTML = "New content here!";
-        }
-
-        document.getElementById("changeButton").addEventListener("click", changeContent);
-    </script>
+    <footer>
+        <p>&copy; 2025 Notebook Industry. All rights reserved.</p>
+    </footer>
 </body>
 </html>
